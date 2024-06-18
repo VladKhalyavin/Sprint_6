@@ -25,6 +25,7 @@ class MainPage(BasePage):
     @allure.step('Раскрытие аккордиона')
     def click_to_accordion(self, num):
         locator_question = self.format_locators(self.question, num)
+        self.find_element_with_wait(locator_question)
         self.click_to_element(locator_question)
 
     @allure.step('Получение текста ответа')
