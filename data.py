@@ -29,5 +29,5 @@ PERIODS = ['сутки', 'двое суток', 'трое суток', 'четв
 
 #  Датасеты для TestTransitions:
 #    test_transitions:
-NAV_BUTTONS = [(Transitions.logo_yandex, 'https://dzen.ru/?yredirect=true'),
-               (Transitions.logo_scooter, 'https://qa-scooter.praktikum-services.ru/')]
+NAV_BUTTONS = [(Transitions.logo_yandex, 'https://dzen.ru/?yredirect=true', Transitions.search_button),
+               (Transitions.logo_scooter, 'https://qa-scooter.praktikum-services.ru/', MainPage.nav_order_button)]
