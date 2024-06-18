@@ -3,7 +3,7 @@ import time
 import allure
 
 from page_objects.transitions import Transitions
-from data import NAV_BUTTONS
+from data import NAV_BUTTONS, URL_ORDER_PAGE
 
 
 class TestTransitions:
@@ -12,7 +12,7 @@ class TestTransitions:
     @pytest.mark.parametrize('button, result, target', NAV_BUTTONS)
     def test_transitions(self, driver, button, result, target):
 
-        driver.get('https://qa-scooter.praktikum-services.ru/order')
+        driver.get(URL_ORDER_PAGE)
         transitions = Transitions(driver)
         transitions.click_to_navigation_button(button)
         tabs = driver.window_handles

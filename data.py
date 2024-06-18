@@ -2,6 +2,12 @@ from page_objects.main_page import MainPage
 from page_objects.order_page import OrderPage
 from page_objects.transitions import Transitions
 
+
+#  Адреса тестируемых страниц:
+URL_ORDER_PAGE = 'https://qa-scooter.praktikum-services.ru/order'
+URL_MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
+URL_DZEN = 'https://dzen.ru/?yredirect=true'
+
 #  Датасеты для TestMainPage:
 #    test_check_accordion_answer:
 ANSWER = [(0, 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'),
@@ -29,5 +35,5 @@ PERIODS = ['сутки', 'двое суток', 'трое суток', 'четв
 
 #  Датасеты для TestTransitions:
 #    test_transitions:
-NAV_BUTTONS = [(Transitions.logo_yandex, 'https://dzen.ru/?yredirect=true', Transitions.search_button),
-               (Transitions.logo_scooter, 'https://qa-scooter.praktikum-services.ru/', MainPage.nav_order_button)]
+NAV_BUTTONS = [(Transitions.logo_yandex, URL_DZEN, Transitions.search_button),
+               (Transitions.logo_scooter, URL_MAIN_PAGE, MainPage.nav_order_button)]
